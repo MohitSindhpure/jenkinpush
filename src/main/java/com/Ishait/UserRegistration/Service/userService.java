@@ -16,5 +16,11 @@ public interface userService {
 	public List<Userregister> getalluser();
 	
 	public Userregister Findbyid(int id);
+	
+	public Userregister Updateuser(Userregister user);
+	
+	public boolean Deleteuserbyid(int userid);
+	
+	public boolean Deletealluser();
 
 }

@@ -67,5 +67,44 @@ public class userregistration {
 		model.addAttribute("USER", findbyid);
 		return "Byid";
 	}
+	
+	@GetMapping("/update")
+	public String update()
+	{
+		return "Successfullyupdate";
+	}
 
+	@PostMapping("/Updatuser")
+	public String Updateuser(Userregister user,Model model )
+	{
+		Userregister updateuser = userService.Updateuser(user);
+		if(updateuser!=null)
+		return "Updatedsucces";
+		else {
+			return "fail";
+		}
+	}
+	
+	@GetMapping("/Delete/{id}")
+	public String Deleteuser(@PathVariable int id)
+	{
+		boolean deleteuserbyid = userService.Deleteuserbyid(id);
+		if(deleteuserbyid)
+		return  "Succesfuldelete";
+		else {
+			return"Faildelete";
+		}
+	}
+	
+	@GetMapping("/Deleteall")
+	public String Deleteall()
+	{
+		boolean deletealluser = userService.Deletealluser();
+		if (deletealluser) {
+			return "Succesfuldelete";
+		}
+		else {
+			return"Faildelete";
+		}
+	}
 }

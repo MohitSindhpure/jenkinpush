@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-${USER }
+<h1>Successfully updated</h1>
 </body>
 </html>

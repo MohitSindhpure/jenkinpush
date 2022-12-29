@@ -7,8 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="Saveuser" method ="post">
-<h1>Registration page</h1>
+<form action="Updatuser" method ="post">
+<h1>Updation page</h1>
+<label> Id </label>         
+<input type="text" name="id" size="15"/> <br> <br>  
+
 <label> First name </label>         
 <input type="text" name="fname" size="15"/> <br> <br>  
 <label> Last name: </label>     
@@ -22,7 +25,7 @@
 <input type="text" name="Address" size="15"/> <br> <br>
 <label> Age: </label>         
 <input type="text" name="age" size="15"/> <br> <br>
-<tr><td><input type="submit" value="REGISTER"></td>
+<tr><td><input type="submit" value="Update"></td>
 			</tr>
 
 </form>
